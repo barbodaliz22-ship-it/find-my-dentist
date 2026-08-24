@@ -5,21 +5,21 @@ import { useReveal } from "@/lib/useReveal";
 
 const cases = [
   {
-    label: "Veneers, 6 Units",
+    label: "Veneers · Smile Design",
     before:
       "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
     after:
       "https://images.unsplash.com/photo-1581182800629-7d90925ad072?q=80&w=800&auto=format&fit=crop",
   },
   {
-    label: "Invisalign, 11 Months",
+    label: "Invisalign · Smile Alignment",
     before:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop",
     after:
       "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=800&auto=format&fit=crop",
   },
   {
-    label: "Full Whitening",
+    label: "Whitening · Brightening",
     before:
       "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=800&auto=format&fit=crop",
     after:
@@ -38,8 +38,12 @@ export default function SmileGallery() {
             Smile Gallery
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-navy text-balance">
-            Real transformations
+            A visual look at what&apos;s possible
           </h2>
+          <p className="text-ink/50 leading-relaxed mt-5 max-w-lg">
+            A presentation concept showing how treatment stories can be brought
+            to life through a more visual, premium experience.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -51,22 +55,22 @@ export default function SmileGallery() {
             >
               <Image
                 src={c.before}
-                alt={`Before ${c.label}`}
+                alt={`${c.label} presentation image`}
                 fill
                 className="object-cover transition-opacity duration-700 group-hover:opacity-0"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <Image
                 src={c.after}
-                alt={`After ${c.label}`}
+                alt={`${c.label} presentation image on hover`}
                 fill
                 className="object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/85 to-transparent p-6">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-6">
                 <p className="text-white text-sm font-medium">{c.label}</p>
                 <p className="text-white/60 text-xs mt-1 uppercase tracking-wide">
-                  Hover to see after
+                  Hover to explore
                 </p>
               </div>
             </div>
